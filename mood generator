@@ -1,0 +1,45 @@
+import java.util.Scanner;
+import java.util.Random;
+
+
+class moodnew{
+    public static void main (String []args){
+        Scanner sc=new Scanner (System.in);
+        System.out.println("enter you mood ");
+        String m=sc.nextLine();
+        
+        String[] happyReplies = {"😊 Keep smiling!", "😄 The world shines with you!", "🌞 What made you happy today?"};
+        Random r = new Random();
+        String l=(happyReplies[r.nextInt(happyReplies.length)]);
+        String[]sadreplies={"thats all right","you got this","you you have a great day tomr","i am by your side","you can do this"};
+        Random s=new Random();
+        String k=(sadreplies[s.nextInt(sadreplies.length)]);
+        String[]angryreplies={"take a deep breath ","i feels the same","you are not alone","you are been seen "};
+        Random a=new Random();
+        String o=(angryreplies[a.nextInt(angryreplies.length)]);
+        String[]confusedreplies={"i am tired too","i am also confused","do whatever you want"};
+        Random c=new Random();
+        String q=(confusedreplies[c.nextInt(confusedreplies.length)]);
+        
+        
+
+        if(m.equals("happy")){
+            System.out.println(l);
+            
+        }
+        else if(m.equals("sad")){
+            System.out.println(k);
+        }
+        else if(m.equals("angry")){
+            System.out.println(o);
+            
+        }
+        else if(m.equals("confused")){
+            System.out.println(q);
+            
+        }
+        else{
+            System.out.println("then you are happy for sure");
+        }
+    }
+}
